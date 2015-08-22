@@ -12,6 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require twitter/bootstrap
+ *= require bootstrap_and_overrides
  *= require devise_bootstrap_views_less
  */

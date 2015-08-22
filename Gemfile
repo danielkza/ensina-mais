@@ -40,7 +40,8 @@ gem 'omniauth-facebook'
 gem 'devise-bootstrap-views'
 
 gem 'therubyracer'  # If using Ruby
-gem 'less-rails-bootstrap'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +55,8 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  gem 'rails_layout'
 end
 
 group :production do
