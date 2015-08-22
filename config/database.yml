@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: ensinamais
+  password: ensinamais
+  host: localhost
+
+development:
+  <<: *default
+  database: ensinamais_development
+test:
+  <<: *default
+  database: ensinamais_test
+
+production:
+  <<: *default
+  database: ensinamais_production

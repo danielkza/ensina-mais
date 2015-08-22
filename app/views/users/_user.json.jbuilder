@@ -1,0 +1,1 @@
+json.extract! user, :id, :facebook_id, :avatar, :created_at, :updated_at, :name
