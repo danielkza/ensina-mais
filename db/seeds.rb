@@ -5,8 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-require 'date'
-
-joao = User.create(name: "João da Silva", facebook_id: nil, facebook_token: nil)
-maria = User.create(name: "Maria de Souza", facebook_id: nil, facebook_token: nil)
