@@ -1,5 +1,3 @@
 class Student < User
-  has_and_belongs_to_many :courses, join_table: 'courses_students',
-                          foreign_key: 'student_id'
-
+  has_and_belongs_to_many :course_offers, foreign_key: 'student_id'
 end

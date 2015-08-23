@@ -1,10 +1,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :destroy]
 
-  # GET /users
-  # GET /users.json
-  def index
-    @users = User.where(type: ['Student', 'Teacher'])
+  def students
+    @users = User.where(type: 'Student')
+  end
+
+  def teachers
+    @users = User.where(type: 'Teacher')
+  end
+
+  def industries
+    @users = User.where(type: 'Industry')
   end
 
   # GET /users/1
