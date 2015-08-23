@@ -27,5 +27,6 @@ class UsersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_user
     @user = User.find(params[:id])
+    @user = nil if @user && !['Student', 'Teacher'].includes?(@user.type)
   end
 end
