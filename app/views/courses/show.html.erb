@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @course.industry %>
+</p>
+
+<p>
+  <strong>Students:</strong>
+  <%= @course.students %>
+</p>
+
+<p>
+  <strong>Teachers:</strong>
+  <%= @course.teachers %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @course.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @course.location %>
+</p>
+
+<p>
+  <strong>Requirements:</strong>
+  <%= @course.requirements %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @course.cost %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

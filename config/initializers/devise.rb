@@ -4,7 +4,8 @@ Devise.setup do |config|
   config.omniauth :facebook,
                   Rails.application.secrets.facebook['app_id'],
                   Rails.application.secrets.facebook['app_secret'],
-                  scope: 'email', info_fields: 'email, name'
+                  scope: 'email,user_location,user_work_history,user_education_history,user_birthday',
+                  info_fields: 'email,name,gender,work,education,birthday,location'
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing

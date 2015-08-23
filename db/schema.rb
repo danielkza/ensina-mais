@@ -11,14 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822195457) do
+ActiveRecord::Schema.define(version: 20150823002639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "courses", force: :cascade do |t|
+    t.integer  "industry_id"
+    t.integer  "teacher_id"
+    t.string   "date"
+    t.string   "location"
+    t.string   "requirements"
+    t.string   "cost"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "courses_students", force: :cascade do |t|
+    t.integer "course_id"
+    t.integer "student_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "encrypted_password",     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -32,6 +48,16 @@ ActiveRecord::Schema.define(version: 20150822195457) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name",                                null: false
+    t.string   "type"
+    t.string   "field"
+    t.string   "age_range"
+    t.string   "location"
+    t.string   "study"
+    t.string   "work"
+    t.string   "info"
+    t.string   "genre"
+    t.integer  "birth_year"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -39,4 +65,7 @@ ActiveRecord::Schema.define(version: 20150822195457) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["uid"], name: "index_users_on_uid", using: :btree
 
+  add_foreign_key "courses", "users", column: "teacher_id"
+  add_foreign_key "courses_students", "courses"
+  add_foreign_key "courses_students", "users", column: "student_id"
 end

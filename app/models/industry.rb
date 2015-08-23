@@ -1,0 +1,2 @@
+class Industry < User
+end
