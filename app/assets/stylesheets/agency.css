@@ -171,7 +171,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #F1F1F1;
 }
 
 .navbar-default .navbar-brand {
@@ -208,8 +208,9 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
+    font-size: 14px;
     letter-spacing: 1px;
-    color: #fff;
+    color: #231f20;
 }
 
 .navbar-default .nav li a:hover,
@@ -234,7 +235,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
+        /*background-color: transparent;*/
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -262,11 +263,14 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
+    overflow-x: hidden;
+    min-height: 100vh;
+    /*margin-top:100px;*/
     text-align: center;
     color: #fff;
     background-attachment: scroll;
     background-image: url(header-bg.jpg);
-    background-position: center center;
+    /*background-position: center center;*/
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -298,7 +302,8 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        margin-top: 100px;
+        padding-top: 47%;
         padding-bottom: 200px;
     }
 
